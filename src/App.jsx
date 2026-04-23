@@ -14,28 +14,28 @@ const projects = [
     title: 'Archive Zero',
     category: 'Brand System / Fashion Label',
     image: '/assets/images/project-1.jpg',
-    url: 'https://github.com/Viking-Coder-jpg',
+    url: 'https://github.com/vynxvoid',
   },
   {
     number: '02',
     title: 'Signal Frames',
     category: 'Motion Direction / Campaign',
     image: '/assets/images/project-2.jpg',
-    url: 'https://github.com/Viking-Coder-jpg',
+    url: 'https://github.com/vynxvoid',
   },
   {
     number: '03',
     title: 'Depth Study',
     category: 'Interactive Portfolio / Web',
     image: '/assets/images/project-3.jpg',
-    url: 'https://github.com/Viking-Coder-jpg',
+    url: 'https://github.com/vynxvoid',
   },
   {
     number: '04',
     title: 'Margin Notes',
     category: 'Editorial Design / Print',
     image: '/assets/images/project-4.jpg',
-    url: 'https://github.com/Viking-Coder-jpg',
+    url: 'https://github.com/vynxvoid',
   },
 ]
 

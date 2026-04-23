@@ -43,7 +43,7 @@ function Navbar() {
           {/* GitHub button — left end */}
           <div className="hidden lg:flex" data-cursor-zone="footer-default">
             <a
-              href="https://github.com/Viking-Coder-jpg"
+              href="https://github.com/vynxvoid"
               target="_blank"
               rel="noopener noreferrer"
               className="pill-button group flex items-center gap-2"
