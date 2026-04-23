@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-white: #fafaf8;
+  --color-black: #0d0d0d;
+  --color-off-white: #f0ede6;
+  --color-dark: #111111;
+  --color-accent: #e8ff00;
+  --color-text-muted: #888888;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-editorial: 'DM Serif Display', serif;
+  --font-mono: 'Space Mono', monospace;
+  --text-hero: clamp(72px, 14vw, 180px);
+  --text-heading: clamp(36px, 6vw, 80px);
+  --text-body: 16px;
+  --text-label: 11px;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-mono);
+    font-size: var(--text-body);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (pointer: fine) {
+    * {
+      cursor: none;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .label {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .pill-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border-radius: 999px;
+    border: 1px solid rgba(13, 13, 13, 0.15);
+    padding: 0.85rem 1.2rem;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transition:
+      transform 0.25s ease,
+      background-color 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .pill-button:hover {
+    transform: translateY(-1px);
+    border-color: rgba(13, 13, 13, 0.35);
+    background: var(--color-accent);
+  }
+
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 1.1rem 0;
+    font-family: var(--font-mono);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0.9rem;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: currentColor;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .hamburger-line {
+    position: absolute;
+    height: 1.5px;
+    width: 22px;
+    background: var(--color-black);
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  .hamburger-line:nth-child(1) {
+    transform: translateY(-7px);
+  }
+
+  .hamburger-line:nth-child(3) {
+    transform: translateY(7px);
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll var(--marquee-duration, 28s) linear infinite;
+  }
+
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee-row {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .particle-sphere-wrap {
+    position: absolute;
+    inset: 64% 0 auto auto;
+    width: min(108vw, 108vh);
+    height: min(108vw, 108vh);
+    transform: translate(18%, -50%);
+    opacity: 0.95;
+  }
+
+  .particle-sphere-canvas {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+
+  .particle-stream-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
