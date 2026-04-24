@@ -8,7 +8,14 @@ export default function ProjectsPage({ revealReady, projects }) {
     <>
       <ProjectsHero revealReady={revealReady} />
       <Marquee
-        items={['Brand Systems', 'Motion Direction', 'Interactive Web', 'Editorial Design']}
+        items={[
+          "AI/ML Engineering",
+          "Data Mining",
+          "FullStack Development",
+          "Competitive Programming",
+          "Problem Solving",
+          "Mathematics"
+        ]}
         className="bg-[var(--color-black)] text-[var(--color-white)] -rotate-[2deg]"
         textClassName="text-[28px]"
         speed={32}

@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion'
-import Counter from './Counter'
+import { motion } from "framer-motion";
+import Counter from "./Counter";
 
-const ease = [0.25, 0.1, 0.25, 1]
+const ease = [0.25, 0.1, 0.25, 1];
 
 const stats = [
-  { value: 50, suffix: '+', label: 'Projects' },
-  { value: 8, suffix: '', label: 'Awards' },
-  { value: 4, suffix: '', label: 'Years' },
-]
+  { value: 8, suffix: "+", label: "Projects" },
+  // { value: 8, suffix: "", label: "Awards" },
+  { value: 2, suffix: "+", label: "Years of Experiance" },
+];
 
 function About() {
   return (
@@ -58,9 +58,11 @@ function About() {
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.8, delay: 0.08, ease }}
           >
-            I am a designer focused on digital products, motion, and visual systems. My work is rooted in
-            editorial composition, clear structure, and building interfaces that feel precise, expressive,
-            and easy to use.
+            I am an AI-ML Engineer ,working at the intersection of AI/ML and fullstack
+            engineering ,from training production grade ML models to shipping
+            end to end web applications. I enjoy breaking down complex problems,
+            whether it's designing a credit risk engine or competing in
+            Competative programming contests.
           </motion.p>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -75,14 +77,16 @@ function About() {
                 <div className="font-display text-[clamp(4rem,7vw,6.5rem)] uppercase leading-none text-[var(--color-accent)]">
                   <Counter value={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.18em] text-white/65">{stat.label}</p>
+                <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.18em] text-white/65">
+                  {stat.label}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

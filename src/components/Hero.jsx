@@ -96,7 +96,7 @@ function Hero({ revealReady }) {
               variants={sideReveal}
               transition={{ duration: 0.95, delay: 0.2, ease }}
             >
-              Mohakud
+              <span className="text-[var(--color-accent)]">Mohakud</span>
             </motion.h2>
 
             <motion.h5
@@ -116,8 +116,7 @@ function Hero({ revealReady }) {
               variants={sideReveal}
               transition={{ duration: 0.95, delay: 0.32, ease }}
             >
-              I design digital experiences, motion studies, and visual systems with an editorial eye and a
-              strong focus on clarity, rhythm, and interaction.
+              Problem solver by nature, builder by choice, bridging AI-ML and Fullstack engineering.
             </motion.p>
           </div>
 
