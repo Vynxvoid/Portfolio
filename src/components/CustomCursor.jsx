@@ -60,6 +60,23 @@ function CustomCursor() {
   const ringX = useSpring(x, springConfig)
   const ringY = useSpring(y, springConfig)
 
+  // Trailing shadow circles with different delays, opacity, and sizes
+  const shadowConfigs = Array.from({ length: 12 }, (_, i) => {
+    const progress = (i + 1) / 12
+    return {
+      delay: 0.08 + i * 0.05,
+      opacity: 0.4 * (1 - progress),
+      size: 15 * (1 - progress),
+    }
+  })
+
+  const shadowTrails = shadowConfigs.map((config) =>
+    useSpring(x, { ...springConfig, damping: springConfig.damping + config.delay * 50 })
+  )
+  const shadowTrailsY = shadowConfigs.map((config) =>
+    useSpring(y, { ...springConfig, damping: springConfig.damping + config.delay * 50 })
+  )
+
   useEffect(() => {
     if (typeof window === 'undefined') {
       return undefined
@@ -108,10 +125,32 @@ function CustomCursor() {
 
   return (
     <>
+      {/* Trailing shadows */}
+      {shadowTrails.map((shadowX, index) => (
+        <motion.div
+          key={`shadow-${index}`}
+          className="pointer-events-none fixed left-0 top-0 z-[87] rounded-full"
+          animate={{
+            backgroundColor: darkZone
+              ? `rgba(157,255,0,${shadowConfigs[index].opacity})`
+              : `rgba(13,13,13,${shadowConfigs[index].opacity})`,
+            width: shadowConfigs[index].size,
+            height: shadowConfigs[index].size,
+          }}
+          transition={{ duration: 0.22, ease: [0.25, 0.5, 0.75, 1] }}
+          style={{
+            x: shadowX,
+            y: shadowTrailsY[index],
+            translateX: '-50%',
+            translateY: '-50%',
+          }}
+        />
+      ))}
+
       <motion.div
         className="pointer-events-none fixed left-0 top-0 z-[90] h-[5px] w-[5px] rounded-full"
         animate={{
-          backgroundColor: darkZone ? 'rgba(232,255,0,1)' : 'rgba(13,13,13,1)',
+          backgroundColor: darkZone ? 'rgba(157,255,0,1)' : 'rgba(13,13,13,1)',
         }}
         transition={{ duration: 0.22, ease: [0.25, 0.1, 0.25, 1] }}
         style={{ x, y, translateX: '-50%', translateY: '-50%' }}
@@ -124,8 +163,8 @@ function CustomCursor() {
           backgroundColor: hovered ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,0)',
           borderColor: darkZone
             ? hovered
-              ? 'rgba(232,255,0,1)'
-              : 'rgba(232,255,0,0.7)'
+              ? 'rgba(157,255,0,1)'
+              : 'rgba(157,255,0,0.7)'
             : hovered
               ? 'rgba(13,13,13,0.9)'
               : 'rgba(13,13,13,0.55)',

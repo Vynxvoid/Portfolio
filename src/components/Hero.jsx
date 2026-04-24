@@ -125,7 +125,7 @@ function Hero({ revealReady }) {
             initial="hiddenScale"
             animate={revealReady ? 'visible' : 'hiddenScale'}
             variants={sideReveal}
-            transition={{ duration: 1.15, delay: 0.2, ease }}
+            transition={{ duration: 1.15, delay: 0.2, ease}}
             data-cursor-zone="footer-default"
           >
             <ParticleSphere />
