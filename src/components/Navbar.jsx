@@ -148,7 +148,7 @@ function Navbar() {
               ))}
             </div>
             <motion.a
-              href="/#contact"
+              href="#footer"
               className="inline-flex w-fit items-center gap-2 rounded-full border border-white px-5 py-3 font-mono text-[11px] uppercase tracking-[0.16em]"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}

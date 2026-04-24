@@ -9,7 +9,7 @@
   --color-black: #0d0d0d;
   --color-off-white: #f0ede6;
   --color-dark: #111111;
-  --color-accent: #e8ff00;
+  --color-accent: #9fff00;
   --color-text-muted: #888888;
   --font-display: 'Bebas Neue', sans-serif;
   --font-editorial: 'DM Serif Display', serif;
@@ -182,6 +182,16 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none;
+  }
+}
+
+@layer utilities {
+  .text-\[var\(--color-accent\)\] {
+    -webkit-text-stroke: 1px var(--color-black);
+  }
+
+  .no-stroke {
+    -webkit-text-stroke: 0;
   }
 }
 

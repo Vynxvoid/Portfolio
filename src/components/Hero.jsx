@@ -100,7 +100,7 @@ function Hero({ revealReady }) {
             </motion.h2>
 
             <motion.h5
-              className="mt-4 font-mono text-sm uppercase tracking-[0.2em] text-[var(--color-accent)] hover:text-black transition duration-300 ease-in-out"
+              className="mt-4 font-mono text-sm uppercase tracking-[0.2em] text-[var(--color-accent)] hover:text-black transition duration-300 ease-in-out no-stroke"
               initial="hiddenLeft"
               animate={revealReady ? 'visible' : 'hiddenLeft'}
               variants={sideReveal}

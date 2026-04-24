@@ -11,31 +11,67 @@ import ProjectsPage from './pages/ProjectsPage'
 const projects = [
   {
     number: '01',
-    title: 'Archive Zero',
-    category: 'Brand System / Fashion Label',
+    title: 'Cryptomoon',
+    category: 'Bitcoin Prediction / AI-ML ',
     image: '/assets/images/project-1.jpg',
-    url: 'https://github.com/vynxvoid',
+    url: 'https://cryptomoon.onrender.com/',
+    githubUrl: 'https://github.com/vynxvoid/cryptomoon',
   },
   {
     number: '02',
-    title: 'Signal Frames',
-    category: 'Motion Direction / Campaign',
+    title: 'Gloaf',
+    category: 'Food Ordering Application / FullStack',
     image: '/assets/images/project-2.jpg',
-    url: 'https://github.com/vynxvoid',
+    url: 'https://gloaf.onrender.com/',
+    githubUrl: 'https://github.com/vynxvoid/gloaf',
   },
   {
     number: '03',
-    title: 'Depth Study',
-    category: 'Interactive Portfolio / Web',
+    title: 'Plutus.AI',
+    category: 'Credit score predictor / Rag + LLM / AI-ML',
     image: '/assets/images/project-3.jpg',
-    url: 'https://github.com/vynxvoid',
+    url: 'https://plutus-ai-snowy.vercel.app/',
+    githubUrl: 'https://github.com/Vynxvoid/Plutus.ai',
   },
   {
     number: '04',
-    title: 'Margin Notes',
-    category: 'Editorial Design / Print',
+    title: 'Mercurius',
+    category: 'Multicategory Rental / FullStack',
     image: '/assets/images/project-4.jpg',
     url: 'https://github.com/vynxvoid',
+    githubUrl: 'https://github.com/Vynxvoid/Mercurius',
+  },
+  {
+    number: '05',
+    title: 'Freight Share',
+    category: 'Logistic Middleman / FullStack',
+    image: '/assets/images/project-5.jpg',
+    url: 'https://freight-share.vercel.app/',
+    githubUrl: 'https://github.com/Vynxvoid/FreightShare',
+  },
+  {
+    number: '06',
+    title: 'Legend of Old Monk',
+    category: '2D Pixle game / JS OOPs',
+    image: '/assets/images/project-4.jpg',
+    url: 'https://oldmonklegend.netlify.app/',
+    githubUrl: 'https://github.com/Vynxvoid/The-Legend-of-Old-Monk.',
+  },
+  {
+    number: '07',
+    title: 'Music Plate.io',
+    category: 'Music plate game / Python-PyGame',
+    image: '/assets/images/project-4.jpg',
+    url: 'https://github.com/Vynxvoid/Music_Plates.io/archive/main.zip',
+    githubUrl: 'https://github.com/Vynxvoid/Music_Plates.io',
+  },
+  {
+    number: '08',
+    title: 'Exam Timer',
+    category: 'Question based Timer / Python',
+    image: '/assets/images/project-4.jpg',
+    url: 'https://github.com/Vynxvoid/Exam_Timer/archive/main.zip',
+    githubUrl: 'https://github.com/Vynxvoid/Exam_Timer',
   },
 ]
 
@@ -51,6 +87,42 @@ const testimonials = [
       'Our site stopped feeling like a portfolio and started acting like a point of view.',
     name: 'Karan Jain / Field Notes',
     variant: 'dark',
+  },
+  {
+    quote:
+      'Our site stopped feeling like a portfolio and started acting like a point of view.',
+    name: 'Karan Jain / Field Notes',
+    variant: 'dark',
+  },
+  {
+    quote:
+      'Our site stopped feeling like a portfolio and started acting like a point of view.',
+    name: 'Karan Jain / Field Notes',
+    variant: 'dark',
+  },
+  {
+    quote:
+      'Our site stopped feeling like a portfolio and started acting like a point of view.',
+    name: 'Karan Jain / Field Notes',
+    variant: 'dark',
+  },
+  {
+    quote:
+      'Our site stopped feeling like a portfolio and started acting like a point of view.',
+    name: 'Karan Jain / Field Notes',
+    variant: 'dark',
+  },
+  {
+    quote:
+      'Sharp thinking, immaculate details, and motion that made the story land without noise.',
+    name: 'Leena Roy / Current Form',
+    variant: 'light',
+  },
+  {
+    quote:
+      'Sharp thinking, immaculate details, and motion that made the story land without noise.',
+    name: 'Leena Roy / Current Form',
+    variant: 'light',
   },
   {
     quote:
