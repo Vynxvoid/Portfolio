@@ -6,7 +6,7 @@ function Footer() {
       data-cursor-zone="footer-default"
     >
       <div className="mx-auto max-w-[1600px]">
-        <a href="mailto:vinaying342@gmail.com" className="block">
+        <a href="mailto:vynxvoid007@gmail.com" className="block">
           <div className="font-display text-[clamp(4.5rem,12vw,11rem)] uppercase leading-[0.86] tracking-[0.02em]">
             <div>Let&apos;s Work</div>
             <div className="flex items-center gap-4 md:gap-8">
@@ -17,7 +17,7 @@ function Footer() {
         </a>
 
         <div className="mt-10 border-t border-current/20 pt-8">
-          <p className="text-center font-editorial text-[clamp(1.8rem,2.5vw,2.8rem)] italic">vinaying342@gmail.com</p>
+          <p className="text-center font-editorial text-[clamp(1.8rem,2.5vw,2.8rem)] italic">vynxvoid007@gmail.com</p>
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-current/20 pt-6 font-mono text-[11px] uppercase tracking-[0.18em] md:flex-row md:items-center md:justify-between">

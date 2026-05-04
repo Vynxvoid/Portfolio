@@ -23,7 +23,7 @@ export default function HomePage({ revealReady, testimonials }) {
         dataCursorZone="lime"
       />
       <About />
-      <Testimonials testimonials={testimonials} />
+      {/* <Testimonials testimonials={testimonials} /> */}
     </>
   );
 }
