@@ -59,9 +59,24 @@ function Work({ projects }) {
                     <h3 className="font-display text-[clamp(3.5rem,6vw,6rem)] uppercase leading-none tracking-[0.02em] transition-colors duration-300 group-hover:text-[var(--color-accent)]">
                       {project.title}
                     </h3>
-                    <p className="mt-3 font-mono text-[12px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
-                      {project.category}
-                    </p>
+                    <div className="mt-3 flex items-center gap-3">
+                      <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+                        {project.category}
+                      </p>
+                      {project.condition && (
+                        <span
+                          className={`rounded-full px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${
+                            project.condition === 'Live'
+                              ? 'bg-green-100 text-green-700 border border-green-200'
+                              : project.condition === 'Working and Deployed'
+                              ? 'bg-yellow-100 text-yellow-700 border border-yellow-200'
+                              : 'bg-red-100 text-red-700 border border-red-200'
+                          }`}
+                        >
+                          {project.condition}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -110,13 +125,28 @@ function Work({ projects }) {
               transition={{ duration: 0.75, delay: index * 0.07, ease }}
             >
               <img src={project.image} alt={project.title} className="mb-5 h-60 w-full rounded-[20px] object-cover" />
-              <div className="mb-3 flex items-center justify-between gap-4">
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
                 <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
                   {project.number}
                 </span>
-                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
-                  {project.category}
-                </span>
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+                    {project.category}
+                  </span>
+                  {project.condition && (
+                    <span
+                      className={`rounded-full px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${
+                        project.condition === 'Live'
+                          ? 'bg-green-100 text-green-700 border border-green-200'
+                          : project.condition === 'Working and Deployed'
+                          ? 'bg-yellow-100 text-yellow-700 border border-yellow-200'
+                          : 'bg-red-100 text-red-700 border border-red-200'
+                      }`}
+                    >
+                      {project.condition}
+                    </span>
+                  )}
+                </div>
               </div>
               <div className="mb-4 flex items-center justify-between">
                 <a

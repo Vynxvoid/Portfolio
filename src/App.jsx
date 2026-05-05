@@ -16,6 +16,7 @@ const projects = [
     image: '/assets/images/project-1.jpg',
     url: 'https://cryptomoon.onrender.com/',
     githubUrl: 'https://github.com/vynxvoid/cryptomoon',
+    condition: 'Live',
   },
   {
     number: '02',
@@ -24,6 +25,7 @@ const projects = [
     image: '/assets/images/project-2.jpg',
     url: 'https://gloaf.onrender.com/',
     githubUrl: 'https://github.com/vynxvoid/gloaf',
+    condition: 'Working and Deployed',
   },
   {
     number: '03',
@@ -32,6 +34,7 @@ const projects = [
     image: '/assets/images/project-3.jpg',
     url: 'https://plutus-ai-snowy.vercel.app/',
     githubUrl: 'https://github.com/Vynxvoid/Plutus.ai',
+    condition: 'Live',
   },
   {
     number: '04',
@@ -40,6 +43,7 @@ const projects = [
     image: '/assets/images/project-4.jpg',
     url: 'https://github.com/vynxvoid',
     githubUrl: 'https://github.com/Vynxvoid/Mercurius',
+    condition: 'Working',
   },
   {
     number: '05',
@@ -48,6 +52,7 @@ const projects = [
     image: '/assets/images/project-5.jpg',
     url: 'https://freight-share.vercel.app/',
     githubUrl: 'https://github.com/Vynxvoid/FreightShare',
+    condition: 'Live',
   },
   {
     number: '06',
@@ -56,6 +61,7 @@ const projects = [
     image: '/assets/images/project-6.jpg',
     url: 'https://oldmonklegend.netlify.app/',
     githubUrl: 'https://github.com/Vynxvoid/The-Legend-of-Old-Monk.',
+    condition: 'Live',
   },
   {
     number: '07',
@@ -64,6 +70,7 @@ const projects = [
     image: '/assets/images/project-7.jpg',
     url: 'https://github.com/Vynxvoid/Music_Plates.io/archive/main.zip',
     githubUrl: 'https://github.com/Vynxvoid/Music_Plates.io',
+    condition: 'Live',
   },
   {
     number: '08',
@@ -72,6 +79,7 @@ const projects = [
     image: '/assets/images/project-8.jpg',
     url: 'https://github.com/Vynxvoid/Exam_Timer/archive/main.zip',
     githubUrl: 'https://github.com/Vynxvoid/Exam_Timer',
+    condition: 'Live',
   },
 ]
 
