@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Counter from "./Counter";
+import ParallaxCanvas from "./ParallaxCanvas";
 
 const ease = [0.25, 0.1, 0.25, 1];
 
@@ -23,11 +24,7 @@ function About() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease }}
         >
-          <img
-            src="/assets/images/studio.jpg"
-            alt="Portrait"
-            className="h-[480px] w-full rounded-[32px] object-cover md:h-[620px]"
-          />
+          <ParallaxCanvas />
         </motion.div>
 
         <div>
